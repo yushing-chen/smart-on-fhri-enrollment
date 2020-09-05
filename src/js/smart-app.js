@@ -186,7 +186,7 @@ var es_url = "https://usvadceapp.lcahncrls.net/?data="+ es_dataUrl;
 
       console.log(es_url);
       alert(es_url);
-//      window.location.replace(es_url);
+      window.location.replace(es_url);
   };
 
 })(window);
