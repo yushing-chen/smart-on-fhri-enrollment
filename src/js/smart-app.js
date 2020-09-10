@@ -150,8 +150,9 @@
       var mrn = getPatientMRN(patient);
       var deb_id = 'EDIPI=***' + edipi + '***ICN=***' + icn +  '***MRN***='  + mrn + '***' ;
       alert(deb_id);
-	if ( (edipi == 'undefined' ) && ( icn == 'undefined' ) && ( mrn == 'undefined' )  )
-	{   console.log('Not patient identifier found');
+	//if ( (edipi == 'undefined' ) && ( icn == 'undefined' ) && ( mrn == 'undefined' )  )
+	if ( (edipi == 'undefined' ) && ( icn == 'undefined' )  )	
+	{   console.log('No patient identifier found');
 		alert('Redirect to Service Connected Rated Conditions of Enrollment will be faild; Due to Patient identifier Required.');
       }
 	     
