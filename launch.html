@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <!-- Temporarily disabl cerner-smart-embeddable-lib -->
     <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
-  <title>Example-SMART-App</title>
+  <title>Enrollment-SMART-App</title>
 </head>
 <body>
 <!-- Required JS files to enable this page to embed within an MPage -->
@@ -22,9 +22,8 @@
 <script>
       localStorage.setItem("debug", "FHIR.*");
       FHIR.oauth2.authorize({
-          //Updated: client_id of ES 08312020
         //'client_id': 'a9c03af0-2d09-494d-86c8-9997ee0088a5',
-        //2633ea01-afd4-4692-b4c3-8894072330d0- reg app
+        //2633ea01-afd4-4692-b4c3-8894072330d0- reg app Need match
         'client_id': '2633ea01-afd4-4692-b4c3-8894072330d0',
           //'scope':  'patient/Patient.read launch online_access openid profile'
         'scope':  'user/Patient.read launch online_access openid profile'

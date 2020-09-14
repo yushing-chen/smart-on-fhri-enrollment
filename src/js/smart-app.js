@@ -60,7 +60,7 @@
         onError();
       }
     }
-    alert("version Rose-10-ES0902-1");
+    alert("version Rose-10-ES0914-2");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
   };
@@ -129,7 +129,7 @@
 
       console.log('extracting the patient identifier MRN');
       for(let i = 0; i < patient.identifier.length; i++) {
-        if (patient.identifier[i].system === dsvIcnIdentifierSystemName) {
+        if (patient.identifier[i].system === dsvIdentifierSystemName) {
           patientId = patient.identifier[i].value;
           found = true;
           console.log(patientId);
@@ -150,9 +150,10 @@
       var mrn = getPatientMRN(patient);
       var deb_id = 'EDIPI=***' + edipi + '***ICN=***' + icn +  '***MRN***='  + mrn + '***' ;
       alert(deb_id);
-	if ( (edipi == 'undefined' ) && ( icn == 'undefined' ) && ( mrn == 'undefined' )  )
-	{   console.log('Not patient identifier found');
-		alert('Redirect to Service Connected Rated Conditions of Enrollment will be faild; Due to Patient identifier Required.');
+//	if ( (edipi == 'undefined' ) && ( icn == 'undefined' ) && ( mrn == 'undefined' )  )
+	if ( (edipi == 'undefined' ) && ( icn == 'undefined' )   )		
+	{   console.log('No patient identifier found');
+		alert('The Patient is missing an EDIPI and ICN. Contact System Administrator.');
       }
 	     
       var fname = '';
@@ -181,7 +182,7 @@
 //Hostname Url
 //https://usvadceapp.lcahncrls.net/?data=
 //https://vaausappesr801.aac.va.gov:7401/es-rs/ratingapp/postform         
-var es_dataUrl = "edipi=" + edipi + "icn=" + icn + "&" + "name=" + nm + "&" + "dob=" + dobStr + "&" +"sex=" + gender + "&" + "fin=" + fin + "&" + "mrn=" + mrn  ;
+var es_dataUrl = "edipi=" + edipi + "&" + "icn=" + icn + "&" + "name=" + nm + "&" + "dob=" + dobStr + "&" +"sex=" + gender + "&" + "fin=" + fin + "&" + "mrn=" + mrn  ;
 var es_url = "https://usvadceapp.lcahncrls.net/?data="+ es_dataUrl;
 
       console.log(es_url);
