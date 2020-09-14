@@ -150,10 +150,17 @@
       var mrn = getPatientMRN(patient);
       var deb_id = 'EDIPI=***' + edipi + '***ICN=***' + icn +  '***MRN***='  + mrn + '***' ;
       alert(deb_id);
+<<<<<<< HEAD
 //	if ( (edipi == 'undefined' ) && ( icn == 'undefined' ) && ( mrn == 'undefined' )  )
 	if ( (edipi == 'undefined' ) && ( icn == 'undefined' )   )		
 	{   console.log('No patient identifier found');
 		alert('The Patient is missing an EDIPI and ICN. Contact System Administrator.');
+=======
+	//if ( (edipi == 'undefined' ) && ( icn == 'undefined' ) && ( mrn == 'undefined' )  )
+	if ( (edipi == 'undefined' ) && ( icn == 'undefined' )  )	
+	{   console.log('No patient identifier found');
+		alert('Redirect to Service Connected Rated Conditions of Enrollment will be faild; Due to Patient identifier Required.');
+>>>>>>> dbf64e5629f67c4ece3a1c7be66962c80e8f53a7
       }
 	     
       var fname = '';
